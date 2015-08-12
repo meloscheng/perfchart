@@ -1,5 +1,7 @@
-# perfchart - Clone of side-scrolling charts and meter bars in Windows Task Manager
+# perfchart 
+Clone of side-scrolling charts and meter bars in Windows Task Manager
 Automatically exported from code.google.com/p/perfchart (from Keith Jarvis)
+
 Code license : MIT License 
 
 Two C++ classes that utilize the Windows GDI API to recreate the graphs and meters used in the Windows Task Manager application. 
@@ -26,12 +28,12 @@ in this case the object is assigned to a global CPerfChart pointer.
 
 4. In the dialog's WM_DRAWITEM message handler copy the DRAWITEMSTRUCT object into the CPerfChart or CPerfMeter object and draw the grid:
 
-if ( (wParam == IDC_BUTTON1) ) 
-{
-        LPDRAWITEMSTRUCT lpDIS = (LPDRAWITEMSTRUCT) lParam;
-        g_pButton1->CopyDrawItemStruct( lpDIS );
-        g_pButton1->DrawGrid( FALSE );
-}
+        if ( (wParam == IDC_BUTTON1) ) 
+        {
+                LPDRAWITEMSTRUCT lpDIS = (LPDRAWITEMSTRUCT) lParam;
+                g_pButton1->CopyDrawItemStruct( lpDIS );
+                g_pButton1->DrawGrid( FALSE );
+        }
 
 Calls to DrawGrid() and DrawMeter() from within this handler should always be called with bPaint = FALSE.
 
