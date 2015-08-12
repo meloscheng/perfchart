@@ -1,5 +1,5 @@
 # perfchart - Clone of side-scrolling charts and meter bars in Windows Task Manager
-Automatically exported from code.google.com/p/perfchart (from keithrja...@gmail.com ?)
+Automatically exported from code.google.com/p/perfchart (from Keith Jarvis)
 Code license : MIT License 
 
 Two C++ classes that utilize the Windows GDI API to recreate the graphs and meters used in the Windows Task Manager application. 
